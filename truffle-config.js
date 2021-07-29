@@ -41,11 +41,11 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-    // development: {
-    //  host: "127.0.0.1",     // Localhost (default: none)
-    //  port: 8545,            // Standard Ethereum port (default: none)
-    //  network_id: "*",       // Any network (default: none)
-    // },
+    development: {
+     host: "127.0.0.1",     // Localhost (default: none)
+     port: 7545,            // Standard Ethereum port (default: none)
+     network_id: "*",       // Any network (default: none)
+    },
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
@@ -66,7 +66,7 @@ module.exports = {
     // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     // },
     rinkibey: {
-    provider: () => new HDWalletProvider(mnemonic, `PROVIDER_URL`),
+    provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/e97503f951c84099bc5dfc54e6279cb0"),
     network_id: 4,       //Rinkibey testnet id
     gas: 5500000,        // Binance smart chain  has a lower block limit than mainnet
     confirmations: 3,    // # of confs to wait between deployments. (default: 10)
@@ -100,7 +100,9 @@ module.exports = {
       }
     }
   },
-
+plugins: [
+    'truffle-plugin-verify'
+  ],
   // Truffle DB is currently disabled by default; to enable it, change enabled: false to enabled: true
   //
   // Note: if you migrated your contracts prior to enabling this field in your Truffle project and want

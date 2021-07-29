@@ -1,0 +1,31 @@
+{
+  "name": "test_smart_contract_auditing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile -all",
+    "migrate": "truffle migrate --network development --reset",
+    "migrate:rinkeby": "truffle migrate --network rinkibey --reset",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennisnutz/test_smart_contract_auditing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennisnutz/test_smart_contract_auditing/issues"
+  },
+  "homepage": "https://github.com/kennisnutz/test_smart_contract_auditing#readme",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.2"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.11"
+  }
+}

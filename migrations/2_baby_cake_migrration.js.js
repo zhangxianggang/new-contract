@@ -1,10 +1,8 @@
+const IterableMapping = artifacts.require("IterableMapping");
 const BABYCAKE = artifacts.require("BABYCAKE");
 
-//const IterableMapping = artifacts.require("IterableMapping");
-
-
-
 module.exports = async function (deployer) {
+  await deployer.deploy(IterableMapping);
+  await deployer.link(IterableMapping, BABYCAKE);
   await deployer.deploy(BABYCAKE);
-  //deployer.deploy(IterableMapping);
 };
